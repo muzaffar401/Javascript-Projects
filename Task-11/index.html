@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Notes</title>
+</head>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #000000;
+    }
+
+    #textContent {
+        margin-top: 20px;
+        font-weight: bold;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    #span {
+        color: red;
+    }
+
+    textarea {
+        font-size: 20px;
+    }
+
+    .note {
+        margin-bottom: 10px;
+        padding: 10px;
+        border: 1px solid #000000;
+        border-radius: 5px;
+        background-color: white;
+    }
+
+    .delete-btn:hover {
+        cursor: pointer;
+        background-color: rgb(255, 0, 0);
+        color: white;
+    }
+
+    .delete-btn {
+        font-size: 20px;
+        border-radius: 5px;
+        float: right;
+        font-weight: bold;
+    }
+
+    #btn1 {
+        font-size: 25px;
+        border-radius: 5px;
+        background-color: rgb(238, 255, 80);
+        border: none;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    #btn1:hover {
+        cursor: pointer;
+    }
+
+    h1 {
+        color: white;
+    }
+</style>
+
+<body>
+
+    <h1>Secure Notes</h1>
+
+    <textarea name="textarea" id="textarea" cols="50" rows="5" placeholder="Enter your note"></textarea><br>
+    <span id="span"></span><br><br>
+    <button onclick="saveNotes()" id="btn1">Add Note</button><br>
+
+
+    <div id="textContent"></div>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>

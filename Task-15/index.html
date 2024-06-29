@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name Drawing Application</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-image: url(/Task-15/css/ethan-hoover-eIVJAkj1uCs-unsplash.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+
+    #canvas-container {
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    canvas {
+        border: 2px solid rgb(255, 255, 255);
+        background-color: white;
+    }
+
+    .container {
+        margin-top: 20px !important;
+        background-color: rgba(255, 255, 255, 0.2) !important;
+        width: 300px !important;
+        padding: 20px !important;
+        border-radius: 10px !important;
+        -moz-box-shadow: 0 0 5px #ffffff;
+        -webkit-box-shadow: 0 0 5px #ffffff;
+        box-shadow: 0 0 5px #ffffff;
+    }
+
+    label {
+        margin-bottom: 10px !important;
+        font-size: 20px !important;
+        font-weight: bold !important;
+        color: white !important;
+    }
+
+    input[type="color"]:hover {
+        cursor: pointer;
+    }
+
+    input[type="color"] {
+        padding: 0;
+        border: none;
+        border-radius: 30px;
+        width: 40px;
+        height: 40px;
+
+    }
+
+    input[type="color"]::-webkit-color-swatch {
+        border: none;
+        border-radius: 30px;
+        padding: 0;
+    }
+
+    input[type="color"]::-webkit-color-swatch-wrapper {
+        border: none;
+        border-radius: 30px;
+        padding: 0;
+    }
+
+    span {
+        font-weight: bold !important;
+        opacity: 0.7 !important;
+    }
+
+    input[type="text"] {
+        font-size: 20px !important;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div id="input-form">
+            <h2 class="text-light">Enter Your Name</h2><br>
+            <form id="drawing-form">
+                <label for="name">Name</label><br>
+                <input type="text" id="name" name="name" class="form-control">
+                <span id="span2"></span><br>
+
+
+                <label for="font-style">Font Style</label><br>
+                <select id="font-style" name="font-style" class="btn btn-success">
+                    <option value="" disabled selected>Select Font Style</option> <!-- Disable the default option -->
+                    <option value="Arial">Arial</option>
+                    <option value="Verdana">Verdana</option>
+                    <option value="Tahoma">Tahoma</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                    <option value="Courier New">Courier New</option>
+                    <option value="Fantasy">Fantasy</option>
+                </select><br>
+                <span id="span1"></span>
+                <br><br>
+
+                <label for="color">Color</label><br>
+                <input type="color" id="color" name="color" value="#000000"><br><br>
+
+                <input type="submit" value="Draw Name" class="btn btn-danger">
+            </form>
+        </div>
+    </div>
+
+    <div id="canvas-container">
+        <h3 class="text-center text-light mt-3">Your Text is Print Here</h1>
+            <canvas id="canvas" width="400" height="200"></canvas>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

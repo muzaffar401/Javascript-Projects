@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkerboard Generator</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+    .container {
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: center;
+        text-align: justify;
+        width: 400px !important;
+        border-radius: 10px !important;
+        -webkit-box-shadow: 0 0 5px 2px #000000 !important;
+        -moz-box-shadow: 0 0 5px 2px #000000 !important;
+        box-shadow: 0 0 5px 2px #000000 !important;
+        height: 600px;
+    }
+
+    .board {
+        display: inline-block;
+        margin-top: 20px !important;
+    }
+
+    .row {
+        display: flex;
+    }
+
+    .square {
+        width: 30px !important;
+        /* Initial size of each square */
+        height: 30px !important;
+        /* Initial size of each square */
+    }
+
+    #print {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+    }
+
+    label {
+        font-size: 20px;
+        font-family: serif;
+    }
+
+    input[type='color']:hover {
+        cursor: pointer;
+    }
+
+    input[type='color'] {
+        padding: 0;
+        border: none;
+        border-radius: 30px;
+        width: 40px;
+        height: 40px;
+
+    }
+
+    input[type='color']::-webkit-color-swatch {
+        border: 1px solid;
+        border-radius: 30px;
+        padding: 0;
+    }
+
+    input[type='color']::-webkit-color-swatch-wrapper {
+        border: none;
+        border-radius: 30px;
+        padding: 0;
+    }
+</style>
+
+<body>
+    <h2 class="text-center text-decoration-underline">Checkerboard Generator</h2><br>
+    <div class="container text-center">
+
+        <form id="checkerboardForm">
+            <label for="rows">Number of Rows</label><br><br>
+            <input type="number" id="rows" name="rows"><br>
+            <span id="span1"></span><br>
+            <label for="columns">Number of Columns</label><br><br>
+            <input type="number" id="columns" name="columns"><br>
+            <span id="span2"></span><br><br>
+            <label for="lightColor">Light Square Color</label><br><br>
+            <input type="color" id="lightColor" name="lightColor" value="#ffffff"><br>
+            <span id="span3"></span><br><br>
+            <label for="darkColor">Dark Square Color</label><br><br>
+            <input type="color" id="darkColor" name="darkColor" value="#000000"><br>
+            <span id="span4"></span><br><br>
+            <button class="btn btn-success" type="button" onclick="generateCheckerBoard()">Generate
+                Checkerboard</button>
+        </form>
+
+    </div>
+    <div id="print"></div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

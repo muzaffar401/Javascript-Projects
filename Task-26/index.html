@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lnteractive image gallery</title>
+</head>
+
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+        font-family: sans-serif;
+    }
+
+    .container {
+        width: 1170px;
+        margin: auto;
+        flex-wrap: wrap;
+        display: flex;
+    }
+
+    .gallerItems {
+        flex-basis: 23%;
+        margin: 1%;
+    }
+
+    .gallerItems img {
+        width: 100%;
+        height: 220px;
+        cursor: pointer;
+    }
+
+    .galleryoverlay {
+        width: 100%;
+        height: 100%;
+        display: none;
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .imgBox {
+        width: 50%;
+        height: 70%;
+        left: 25%;
+        top: 10%;
+        transition: 0.5s;
+        transform: scale(0);
+        background-color: aliceblue;
+        position: fixed;
+    }
+
+    .imgBox img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .imgBox span {
+        position: absolute;
+        right: 0px;
+        color: white;
+        font-size: 40px;
+        cursor: pointer;
+    }
+
+    .galleryoverlayShow {
+        display: block;
+    }
+
+    .imgBoxshow {
+        transform: scale(1);
+    }
+</style>
+
+<body>
+    <div class="galleryoverlay"></div>
+    <div class="imgBox">
+        <span>&times;</span>
+        <img src="" alt="">
+    </div>
+    <div class="container" id="gallery">
+        <div class="gallerItems">
+            <img src="/Task-26/images/image1.jpg" alt="">
+        </div>
+        <div class="gallerItems">
+            <img src="/Task-26/images/image2.jpg" alt="">
+        </div>
+        <div class="gallerItems">
+            <img src="/Task-26/images/image3.jpg" alt="">
+        </div>
+        <div class="gallerItems">
+            <img src="/Task-26/images/image4.jpg" alt="">
+        </div>
+        <div class="gallerItems">
+            <img src="/Task-26/images/image5.jpg" alt="">
+        </div>
+        <div class="gallerItems">
+            <img src="/Task-26/images/image6.jpg" alt="">
+        </div>
+        <div class="gallerItems">
+            <img src="/Task-26/images/image7.jpg" alt="">
+        </div>
+        <div class="gallerItems">
+            <img src="/Task-26/images/image8.jpg" alt="">
+        </div>
+
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

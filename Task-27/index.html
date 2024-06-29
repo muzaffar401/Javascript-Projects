@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New User</title>
+</head>
+
+<style>
+    /* Global styles */
+    body {
+        font-family: Arial, sans-serif;
+        background: url(/Task-27/img/5076404.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        color: #ffffff;
+        padding: 20px;
+    }
+
+    /* Heading styles */
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    /* User list styles */
+    ul {
+        width: 80%;
+        max-width: 400px;
+        margin: 20px auto;
+        list-style-type: none;
+        padding: 0;
+    }
+
+    li {
+        padding: 10px;
+        background-color: white;
+        border-radius: 8px;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    li button {
+        padding: 6px 12px;
+        background-color: #dc3545;
+        color: white;
+        border-radius: 4px;
+        border: none;
+        cursor: pointer;
+    }
+
+    li button:hover {
+        background-color: #c82333;
+    }
+
+
+    /* Styles for the list and list items */
+    ul {
+        width: 80%;
+        max-width: 400px;
+        margin: 20px auto;
+        list-style-type: none;
+        padding: 0;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    /* Style for each list item */
+    li.user-item {
+        padding: 15px;
+        background-color: white;
+        border-radius: 8px;
+        margin-bottom: 10px;
+        display: block;
+        text-align: left;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Style for the user details */
+    .user-details {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    /* Style for the edit and delete buttons */
+    .actions {
+        display: flex;
+        gap: 10px;
+    }
+
+    li button {
+        padding: 8px 12px;
+        background-color: #007bff;
+        color: white;
+        border-radius: 4px;
+        border: none;
+        cursor: pointer;
+    }
+
+    li button:hover {
+        background-color: #0056b3;
+    }
+
+    /* Delete button specific style */
+    li button.delete {
+        background-color: #dc3545;
+    }
+
+    li button.delete:hover {
+        background-color: #c82333;
+    }
+
+    /* Style the form */
+    form {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 50px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        height: 100%;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    form label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    input {
+        width: 94%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        font-size: 20px;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+
+
+    /* Style the error messages */
+    .error-message {
+        color: red;
+        font-size: 18px;
+        margin-top: 5px;
+        height: 20px;
+        display: inline-block;
+    }
+
+
+    /* Style the user list */
+    #usersList {
+        max-width: 400px;
+        margin: 20px auto;
+        list-style-type: none;
+        padding: 0;
+        color: black !important;
+    }
+
+    .user-item {
+        margin-bottom: 15px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .user-details {
+        display: block;
+    }
+
+    .actions {
+        margin-top: 10px;
+    }
+
+    .actions button {
+        margin-right: 10px;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+    .actions .edit {
+        background-color: #28a745;
+        color: white;
+    }
+
+    .actions .edit:hover {
+        background-color: #218838;
+    }
+
+    .actions .delete {
+        background-color: #dc3545;
+        color: white;
+    }
+
+    .actions .delete:hover {
+        background-color: #c82333;
+    }
+</style>
+
+<body>
+    <h1>Add New User</h1>
+    <!-- Form to add a new user -->
+    <form id="addForm">
+        <div class="form-group">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName">
+            <span id="firstNameError" class="error-message"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName">
+            <span id="lastNameError" class="error-message"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            <span id="emailError" class="error-message"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+            <span id="passwordError" class="error-message"></span>
+        </div>
+
+        <button type="submit">Add User</button>
+    </form>
+
+    <h2>User Details</h2>
+    <ul id="usersList"></ul>
+
+    <!-- Load Axios from CDN for making HTTP requests -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <!--JAVASCRIPT LINK  -->
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>color changer</title>
+</head>
+
+<style>
+    .container {
+        text-align: center;
+        margin-top: 200px;
+    }
+
+    #btn {
+        background: rgb(131, 58, 180);
+        background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+        padding: 10px;
+        font-size: 30px;
+        border-radius: 10px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: 800;
+    }
+
+    #btn:hover {
+        cursor: pointer;
+    }
+
+    #colorpicker:hover {
+        cursor: pointer;
+    }
+
+    p {
+        color: chartreuse;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        text-decoration: underline;
+        font-weight: 800;
+        font-size: 30px;
+    }
+</style>
+
+<body id="body">
+    <div class="container">
+        <p>Pick Color</p>
+        <input type="color" name="" id="colorpicker"><br><br><br>
+
+        <input type="button" id="btn" value="Change" onclick="colorChanger()">
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Accordion</title>
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+    body {
+        margin: 0;
+        padding: 0;
+        background-image: url(/Task-19/img/bekky-bekks-ZiG6GmNlfeI-unsplash.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        font-family: "Roboto", sans-serif;
+    }
+
+    .accordion {
+        max-width: 1200px;
+        margin: 20px auto;
+    }
+
+    .accordion-item {
+        border-bottom: 1px solid #ffffff;
+        transition: border-color 0.3s ease;
+    }
+
+    .accordion-item:last-child {
+        border-bottom: none;
+    }
+
+    .accordion-header {
+        background-color: rgba(255, 255, 255, 0.3);
+        padding: 20px;
+        cursor: pointer;
+        font-weight: bolder;
+        border: none;
+        outline: none;
+        width: 100%;
+        text-align: left;
+        transition: background-color 0.3s ease;
+        font-size: 20px;
+    }
+
+    .accordion-header:hover {
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+
+    .accordion-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        padding: 0 15px;
+        background-color: rgba(255, 255, 255, 0.3);
+        border-top: 1px solid #ddd;
+        font-size: 20px;
+    }
+
+    .accordion-content p {
+        margin: 0;
+    }
+
+    .accordion-item.active .accordion-content {
+        max-height: 1000px;
+        /* Set a large value for max-height to allow smooth expansion */
+    }
+
+    .arrow-down::before {
+        content: '\25BC';
+        float: right;
+        color: green;
+    }
+
+    .arrow-right::before {
+        content: '\25B6';
+        float: right;
+        color: red;
+    }
+
+    .h2 {
+        text-align: center;
+        font-size: 50px;
+    }
+</style>
+
+<body>
+
+    <div class="accordion">
+        <h2 class="h2">FAQs</h2>
+        <div class="accordion-item">
+            <button class="accordion-header arrow-right">What is JavaScript?</button>
+            <div class="accordion-content">
+                <p>A high-level, interpreted programming language called JavaScript makes it possible to create
+                    interactive web pages and online apps with dynamic functionality. Commonly referred to as the
+                    universal language, Javascript is primarily used by developers for front-end and back-end work.</p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <button class="accordion-header arrow-right">What are the different data types in JavaScript?</button>
+            <div class="accordion-content">
+                <p>Number,String,Boolean,Null,Undefined and Symbol are the data types in javascript.</p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <button class="accordion-header arrow-right">What is the purpose of the “this” keyword in
+                JavaScript?</button>
+            <div class="accordion-content">
+                <p>The this keyword refers to the object that is executing the current function or method. It allows
+                    access to object properties and methods within the context of that object.</p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <button class="accordion-header arrow-right">What is the difference between == and === operators in
+                JavaScript?</button>
+            <div class="accordion-content">
+                <p>The equality == operator is a comparison operator that compares two values and returns true if they
+                    are equal. The strict equality === operator is also a comparison operator, but it compares two
+                    values and returns true only if they are equal and of the same type.</p>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <button class="accordion-header arrow-right"> What is the difference between “let”, “const”, and
+                “var”?</button>
+            <div class="accordion-content">
+                <p>let and const were introduced in ES6 and have block scope. let is reassignable, and const is
+                    non-reassignable. var is function-scoped and can be redeclared and reassigned throughout the
+                    function.</p>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <button class="accordion-header arrow-right">What are closures in JavaScript?</button>
+            <div class="accordion-content">
+                <p>Closures (closureFn) are functions that have access to variables from an outer function even after
+                    the outer function has finished executing. They “remember” the environment in which they were
+                    created.</p>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <button class="accordion-header arrow-right">What is event delegation in JavaScript?</button>
+            <div class="accordion-content">
+                <p>Event delegation is a technique where you attach a single event listener to a parent element, and
+                    that event listener handles events occurring on its child elements. It helps optimize performance
+                    and reduce memory consumption.</p>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <button class="accordion-header arrow-right"> What is the purpose of the bind() method in
+                JavaScript?</button>
+            <div class="accordion-content">
+                <p>The bind() method is used to create a new function with a specified this value and an initial set of
+                    arguments. It allows you to set the context of a function permanently.</p>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <button class="accordion-header arrow-right">What is the difference between function declarations and
+                function
+                expressions?</button>
+            <div class="accordion-content">
+                <p>Function declarations are defined using the function keyword, while function expressions are defined
+                    by assigning a function to a variable. Function declarations are hoisted, while function expressions
+                    are not.</p>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <button class="accordion-header arrow-right">What is a callback function in JavaScript?</button>
+            <div class="accordion-content">
+                <p>A callback function is a function passed as an argument to another function, which is then invoked
+                    inside the outer function. It allows asynchronous or event-driven programming.</p>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <button class="accordion-header arrow-right">What are promises in JavaScript?</button>
+            <div class="accordion-content">
+                <p>Promises are objects used for asynchronous operations. They represent the eventual completion or
+                    failure of an asynchronous operation and allow chaining and handling of success or error cases.</p>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <button class="accordion-header arrow-right"> What is the difference between synchronous and asynchronous
+                programming?</button>
+            <div class="accordion-content">
+                <p>In synchronous programming, the program execution occurs sequentially, and each statement blocks the
+                    execution until it is completed. In asynchronous programming, multiple tasks can be executed
+                    concurrently, and the program doesn’t wait for a task to finish before moving to the next one.</p>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <button class="accordion-header arrow-right">How do you handle errors in JavaScript?</button>
+            <div class="accordion-content">
+                <p>Errors in JavaScript can be handled using try-catch blocks. The try block contains the code that may
+                    throw an error, and the catch block handles the error and provides an alternative execution path.
+                </p>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <button class="accordion-header arrow-right">What are arrow functions in JavaScript?</button>
+            <div class="accordion-content">
+                <p>Arrow functions are a concise syntax for writing JavaScript functions. They have a more compact
+                    syntax compared to traditional function expressions and inherit the this value from their
+                    surrounding scope.</p>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <button class="accordion-header arrow-right">What is the difference between querySelector and
+                getElementById?</button>
+            <div class="accordion-content">
+                <p>querySelector is a more versatile method that allows you to select elements using CSS-like selectors,
+                    while getElementById specifically selects an element with the specified ID.</p>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <button class="accordion-header arrow-right">What is the purpose of the setTimeout() function in
+                JavaScript?</button>
+            <div class="accordion-content">
+                <p>The setTimeout() function is used to delay the execution of a function or the evaluation of an
+                    expression after a specified amount of time in milliseconds.</p>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <button class="accordion-header arrow-right">What is event delegation and why is it useful?</button>
+            <div class="accordion-content">
+                <p>Event delegation is a technique where you attach a single event listener to a parent element to
+                    handle events occurring on its child elements. It’s useful for dynamically created elements or when
+                    you have a large number of elements.</p>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <button class="accordion-header arrow-right">What is the purpose of the map() function in
+                JavaScript?</button>
+            <div class="accordion-content">
+                <p>The map() function is used to iterate over an array and apply a transformation or computation on each
+                    element. It returns a new array with the results of the transformation.</p>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <button class="accordion-header arrow-right">What is the purpose of the reduce() function in
+                JavaScript?</button>
+            <div class="accordion-content">
+                <p>The reduce() function is used to reduce an array to a single value by applying a function to each
+                    element and accumulating the result.</p>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <button class="accordion-header arrow-right">What is the purpose of the fetch() function in
+                JavaScript?</button>
+            <div class="accordion-content">
+                <p>The fetch() function is used to make asynchronous HTTP requests in JavaScript. It returns a Promise
+                    that resolves to the response from the server.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

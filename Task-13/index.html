@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rainbow Drawing App</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-image: url(/Task-13/img/patrick-fore-1gT773Pm8Mo-unsplash.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+
+    canvas {
+        display: block;
+        margin: 20px auto;
+    }
+
+    p {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .error {
+        color: red;
+        font-weight: bold;
+    }
+
+    p {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .container {
+        width: 20rem;
+        background-color: rgba(255, 255, 255, 0.3);
+        border-radius: 20px;
+        padding: 20px;
+    }
+
+    input:hover {
+        cursor: pointer;
+    }
+
+    input {
+        padding: 0;
+        border: none;
+        border-radius: 30px;
+        width: 40px;
+        height: 40px;
+
+    }
+
+    input::-webkit-color-swatch {
+        border: none;
+        border-radius: 30px;
+        padding: 0;
+    }
+
+    input::-webkit-color-swatch-wrapper {
+        border: none;
+        border-radius: 30px;
+        padding: 0;
+    }
+
+    .btn {
+        font-weight: bold !important;
+    }
+
+    h1 {
+        text-align: center;
+        text-decoration: underline;
+    }
+</style>
+
+<body>
+    <h1>Rainbow Drawing App</h1>
+    <canvas id="canvas" width="1200" height="400"></canvas>
+    <div class="container text-center ">
+        <p>Select Color 1</p>
+        <input type="color" id="color1"><br>
+        <span id="span1" class="error"></span><br>
+        <p>Select Color 2</p>
+        <input type="color" id="color2"><br>
+        <span id="span2" class="error"></span><br>
+        <p>Select Color 3</p>
+        <input type="color" id="color3"><br>
+        <span id="span3" class="error"></span><br>
+        <p>Select Color 4</p>
+        <input type="color" id="color4"><br>
+        <span id="span4" class="error"></span><br>
+        <p>Select Color 5</p>
+        <input type="color" id="color5"><br>
+        <span id="span5" class="error"></span><br><br>
+        <button onclick="ranbowFunc()" class="btn btn-warning">Draw Rainbow</button>
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>

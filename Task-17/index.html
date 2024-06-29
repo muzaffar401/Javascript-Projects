@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagonal Circles</title>
+</head>
+
+<style>
+    body,
+    html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        background-image: url(/Task-17/img/terry-vlisidis-WsEbnsnKbUE-unsplash.jpg);
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    canvas {
+        border: 2px solid #333;
+        margin-left: 410px;
+        margin-top: 80px;
+        background-color: white;
+    }
+
+    button {
+        padding: 8px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-size: 15px;
+    }
+
+    button {
+        background-color: #000000;
+        color: #fff;
+        cursor: pointer;
+        border: none;
+    }
+
+    button:hover {
+        background-color: rgb(255, 255, 255);
+        color: black;
+        transition: all 0.2s;
+    }
+
+
+
+
+
+    #span1 {
+        color: rgb(102, 0, 0);
+        font-weight: bolder;
+    }
+
+    form {
+        text-align: justify;
+        border: 2px solid;
+        width: 350px;
+        margin-left: 520px;
+        padding: 20px;
+        margin-top: 20px;
+        height: 300px;
+        background-color: rgba(255, 255, 255, 0.3);
+        color: white;
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        border: none;
+        border-radius: 30px;
+    }
+
+    .color-picker:hover {
+        cursor: pointer;
+    }
+
+    .color-picker {
+        padding: 0;
+        border: none;
+        border-radius: 30px;
+        width: 40px;
+        height: 40px;
+
+
+    }
+
+    .color-picker::-webkit-color-swatch {
+        border: none;
+        border-radius: 30px;
+        padding: 0;
+    }
+
+    input[type="number"] {
+        padding: 10px;
+        font-size: 18px;
+        outline: none;
+
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: 3px solid #ccc;
+        -webkit-transition: 0.5s;
+        transition: 0.5s;
+
+    }
+
+    input[type=number]:focus {
+        border: 3px solid rgb(243, 0, 0);
+    }
+
+    .color-picker ::-webkit-color-swatch-wrapper {
+        border: none;
+        border-radius: 30px;
+        padding: 0;
+    }
+</style>
+
+<body>
+
+    <form id="form">
+        <label for="inp">Number of Circles</label><br><br>
+        <input type="number" id="inp" min="0" value="0"><br>
+        <span id="span1"></span><br><br>
+        <button type="submit">Draw Circles</button>
+        <br><br>
+        <label>Circle Colors</label><br>
+        <div id="colorPickers"></div>
+    </form>
+    <canvas id="canvas" width="600" height="600"></canvas>
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>

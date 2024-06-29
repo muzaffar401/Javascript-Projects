@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+</head>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: rgb(0, 0, 0);
+        height: 612px;
+    }
+
+    .container {
+        max-width: 400px;
+        margin: 50px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        background-color: rgba(255, 255, 255, 1);
+        border: none;
+        height: 400px;
+    }
+
+    input {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+        font-size: 20px;
+    }
+
+    button {
+        padding: 8px 20px;
+        cursor: pointer;
+        font-size: 20px;
+        border-radius: 10px;
+        border: none;
+        background-color: black;
+        color: white;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    }
+
+    h1 {
+        text-align: center;
+        color: rgb(255, 255, 255);
+    }
+
+    #h1 {
+        color: rgb(0, 0, 0);
+    }
+
+    #print {
+        text-align: center;
+        font-size: 25px;
+        font-weight: bold;
+        font-family: sans-serif;
+    }
+
+    #to {
+        float: right;
+    }
+
+    .select {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .to {
+        margin-left: 15px;
+    }
+
+    :placeholder-shown {
+        font-size: 20px;
+    }
+
+    #From {
+        padding: 5px;
+        font-size: 20px;
+    }
+
+    #To {
+        padding: 5px;
+        font-size: 20px;
+    }
+
+    #From:hover {
+        cursor: pointer;
+        border-color: blue;
+    }
+
+    #To:hover {
+        cursor: pointer;
+        border-color: blue;
+    }
+
+    span {
+        font-size: 20px;
+        font-weight: bold;
+    }
+</style>
+
+<body>
+    <h1>Currency Converter</h1>
+    <div class="container">
+        <h1 id="h1">Enter Amount</h1>
+        <input type="number" id="input" min="0" placeholder="0">
+        <br>
+        <div class="select">
+            <div class="from">
+                <span>FROM :</span>
+                <select id="From">
+                    <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                    <option value="GBP">GBP</option>
+                    <option value="JPY">JPY</option>
+                    <option value="CAD">CAD</option>
+                    <option value="PKR">PKR</option>
+                </select>
+            </div>
+            <div class="to">
+                <span>TO :</span>
+                <select id="To">
+                    <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                    <option value="GBP">GBP</option>
+                    <option value="JPY">JPY</option>
+                    <option value="CAD">CAD</option>
+                    <option value="PKR">PKR</option>
+                </select>
+            </div>
+        </div>
+        <br><br>
+        <button onclick="currencyConverter()">Convert</button>
+        <br><br>
+        <div id="print"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

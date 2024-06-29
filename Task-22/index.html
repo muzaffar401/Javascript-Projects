@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reveal Html Elements</title>
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+    }
+
+    body {
+        background: #1D212B;
+    }
+
+    section {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    section:nth-child(1) {
+        color: #fff;
+    }
+
+    section:nth-child(2) {
+        color: #1D212B;
+        background-color: #fff;
+    }
+
+    section:nth-child(3) {
+        color: #fff;
+    }
+
+    section:nth-child(4) {
+        color: #ffffff;
+        background-color: #fff;
+    }
+
+    section .container {
+        margin: 100px;
+    }
+
+    section h1 {
+        font-size: 60px;
+    }
+
+    section h2 {
+        font-size: 40px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    section .cards {
+        display: flex;
+    }
+
+    section .cards .text-card {
+        background-color: #2696E9;
+        margin: 20px;
+        padding: 20px;
+
+    }
+
+    section .cards .text-card h3 {
+        font-size: 30px;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+
+    @media (max-width: 900px) {
+        section h1 {
+            font-size: 40px;
+        }
+
+        section .cards {
+            flex-direction: column;
+
+        }
+    }
+
+    .reveal {
+        position: relative;
+        transform: translateY(150px);
+        opacity: 0;
+        transition: all 2s ease;
+    }
+
+    .reveal.active {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+
+    .html {
+        background-color: rgb(255, 101, 44) !important;
+    }
+
+    .java {
+        background-color: rgb(255, 255, 58) !important;
+    }
+
+    .php {
+        background-color: rgb(117, 57, 117) !important;
+    }
+
+    .net {
+        background-color: rgb(55, 55, 165) !important;
+    }
+
+    .python {
+        background: rgb(255, 244, 0) !important;
+        background: linear-gradient(90deg, rgba(255, 244, 0, 1) 22%, rgba(0, 121, 255, 1) 78%) !important;
+    }
+
+    .frontend {
+        background-color: rgb(48, 48, 255) !important;
+    }
+
+    .backend {
+        background-color: rgb(214, 38, 38) !important;
+    }
+
+    #h2 {
+        color: black;
+    }
+</style>
+
+<body>
+    <section>
+        <h1>Web Developer</h1>
+    </section>
+    <section>
+        <div class="container reveal">
+            <h2>Frontend developer</h2>
+            <div class="cards">
+                <div class="text-card html">
+                    <h3>Html5</h3>
+                    <p>HTML stands for Hyper Text Markup Language. HTML is the standard markup language for creating Web
+                        pages. HTML describes the structure of a Web page. HTML consists of a series of elements. HTML
+                        elements tell the browser how to display the content.</p>
+                </div>
+
+                <div class="text-card css">
+                    <h3>Css3</h3>
+                    <p>CSS is the acronym of “Cascading Style Sheets”. CSS is a computer language for laying out and
+                        structuring web pages (HTML or XML). This language contains coding elements and is composed of
+                        these “cascading style sheets” which are equally called CSS files (. css).</p>
+                </div>
+
+                <div class="text-card java">
+                    <h3>Javascript(ES6)</h3>
+                    <p>JavaScript is a scripting or programming language that allows you to implement complex features
+                        on web pages — every time a web page does more than just sit there and display static
+                        information for you to look at — displaying timely content updates, interactive maps.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container reveal">
+            <h2>Backend developer</h2>
+            <div class="cards">
+                <div class="text-card php">
+                    <h3>PHP</h3>
+                    <p>PHP(short for Hypertext PreProcessor) is the most widely used open source and general purpose
+                        server side scripting language used mainly in web development to create dynamic websites and
+                        applications. It was developed in 1994 by Rasmus Lerdorf.</p>
+                </div>
+
+                <div class="text-card net">
+                    <h3>Microsoft.Net</h3>
+                    <p>. NET is an open-source platform for building desktop, web, and mobile applications that can run
+                        natively on any operating system. The . NET system includes tools, libraries, and languages that
+                        support modern, scalable, and high-performance software development.</p>
+                </div>
+
+                <div class="text-card python">
+                    <h3>python</h3>
+                    <p>Python is a high-level, general-purpose programming language. Its design philosophy emphasizes
+                        code readability with the use of significant indentation. Python is dynamically typed and
+                        garbage-collected. It supports multiple programming paradigms, including structured.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container reveal">
+            <h2 id="h2">Fullstack developer</h2>
+            <div class="cards">
+                <div class="text-card frontend">
+                    <h3>Frontend</h3>
+                    <p>A Front-End Developer is someone who creates websites and web applications. The difference
+                        between Front-End and Back-End is that Front-End refers to how a web page looks, while back-end
+                        refers to how it works.</p>
+                </div>
+
+                <div class="text-card backend">
+                    <h3>Backend</h3>
+                    <p>Back-end developers are the experts who build and maintain the mechanisms that process data and
+                        perform actions on websites. Unlike front-end developers, who control everything you can see on
+                        a website, back-end developers are involved in data storage, security.</p>
+                </div>
+
+                <div class="text-card">
+                    <h3>database</h3>
+                    <p>Databases play a crucial role in full-stack development as they store and manage application
+                        data. Popular database technologies used include MySQL, PostgreSQL, MongoDB, and Redis.
+                        Databases enable data persistence, data retrieval.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="app.js"></script>
+</body>
+
+</html>

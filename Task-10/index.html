@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Application</title>
+</head>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: rgb(0, 0, 0);
+    }
+
+    .container {
+        max-width: 600px;
+        margin: 50px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        background-color: rgba(255, 255, 255, 1);
+        border: none;
+        height: 650px;
+    }
+
+    .p1 {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    input {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+    }
+
+    button {
+        padding: 8px 20px;
+        cursor: pointer;
+        font-size: 20px;
+        border-radius: 10px;
+        border: none;
+        background-color: black;
+        color: white;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    }
+
+    #btn1 {
+        margin-left: 12rem;
+        margin-top: 1rem;
+    }
+
+    #btn2 {
+        margin-top: 1rem;
+    }
+
+    #btn3 {
+        margin-top: 1rem;
+        margin-left: 1rem;
+    }
+
+    #inp1 {
+        font-size: 20px;
+    }
+
+    #inp2 {
+        font-size: 20px;
+    }
+
+    #inp3 {
+        font-size: 20px;
+    }
+
+    #inp4 {
+        font-size: 20px;
+    }
+
+    h1 {
+        text-align: center;
+        color: white;
+        text-decoration: underline;
+        font-family: serif;
+        font-size: 45px;
+    }
+
+    h2 {
+        margin-top: 2rem;
+        font-style: oblique;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #print {
+        color: green;
+    }
+</style>
+
+<body>
+    <h1>Bank Application</h1>
+    <div class="container">
+        <p class="p1">Enter Account Name</p>
+        <input type="text" id="inp1" name="inp1" placeholder="Enter Your Name">
+        <br>
+        <span id="span1"></span>
+        <br>
+        <p class="p1">Enter Initial Balance</p>
+        <input type="number" id="inp2" placeholder="Enter Your Balance">
+        <br>
+        <span id="span2"></span>
+        <br>
+        <button id="btn1" onclick="createAccount()">Create Account</button>
+        <br>
+        <p class="p1">Transaction</p>
+        <input type="number" id="inp3" placeholder="Enter Amount"><br>
+        <span id="span3"></span><br>
+        <button id="btn2" onclick="deposit()">Deposit</button>
+        <button id="btn3" onclick="withdraw()">Withdraw</button>
+        <br>
+        <h2>Account Balance:</h2>
+        <h3 id="print"></h3>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
